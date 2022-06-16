@@ -3,9 +3,9 @@ import { SnackbarProvider } from 'notistack';
 
 export const decorators = [
   muiTheme(),
-  (Story) => (
+  Story => (
     <SnackbarProvider>
       <Story />
     </SnackbarProvider>
-  )
+  ),
 ];
