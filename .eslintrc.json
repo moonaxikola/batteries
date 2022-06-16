@@ -23,13 +23,31 @@
     },
     {
       "files": ["*.ts", "*.tsx"],
-      "extends": ["plugin:@nrwl/nx/typescript"],
-      "rules": {}
+      "extends": ["airbnb-typescript-prettier", "plugin:@nrwl/nx/typescript"],
+      "rules": {
+        "@typescript-eslint/no-unused-vars": "error",
+        "import/no-cycle": "off",
+        "no-underscore-dangle": "off",
+        "class-methods-use-this": "off",
+        "no-useless-constructor": "off",
+        "import/no-extraneous-dependencies": "off",
+        "import/prefer-default-export": "off",
+        "no-shadow": "off",
+        "@typescript-eslint/dot-notation": "error",
+        "@typescript-eslint/no-shadow": ["error", { "ignoreTypeValueShadow": true }]
+      }
     },
     {
       "files": ["*.js", "*.jsx"],
       "extends": ["plugin:@nrwl/nx/javascript"],
       "rules": {}
     }
-  ]
+  ],
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "project": ["apps/**/tsconfig.json", "libs/**/tsconfig.json"]
+      }
+    }
+  }
 }

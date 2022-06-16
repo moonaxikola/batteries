@@ -45,7 +45,9 @@
     "cz-conventional-changelog": "3.3.0",
     "devmoji": "^2.3.0",
     "eslint": "~8.15.0",
+    "eslint-config-airbnb-typescript-prettier": "^5.0.0",
     "eslint-config-prettier": "8.1.0",
+    "eslint-import-resolver-typescript": "^2.7.1",
     "eslint-plugin-cypress": "^2.10.3",
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-jsx-a11y": "6.5.1",
@@ -62,13 +64,10 @@
     "typescript": "~4.7.2"
   },
   "lint-staged": {
-    "apps/**/*": [
-      "npm run lint"
+    "*.json": [
+      "prettier --write ."
     ],
-    "libs/**/*": [
-      "npm run lint"
-    ],
-    "tools/**/*": [
+    "apps/**/*,libs/**/*,tools/**/*": [
       "npm run lint"
     ]
   },

@@ -1,4 +1,8 @@
-# Add files here to ignore them from prettier formatting
-
 /dist
 /coverage
+/.husky
+/.vscode
+/node_modules
+.prettierignore
+yarn.lock
+package-lock.json

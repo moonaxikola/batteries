@@ -15,10 +15,7 @@
         "main": "apps/batteries/src/main.tsx",
         "polyfills": "apps/batteries/src/polyfills.ts",
         "tsConfig": "apps/batteries/tsconfig.app.json",
-        "assets": [
-          "apps/batteries/src/favicon.ico",
-          "apps/batteries/src/assets"
-        ],
+        "assets": ["apps/batteries/src/favicon.ico", "apps/batteries/src/assets"],
         "styles": [],
         "scripts": [],
         "webpackConfig": "@nrwl/react/plugins/webpack"
