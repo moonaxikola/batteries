@@ -4,6 +4,7 @@
   "projects": {
     "docs": "apps/docs",
     "web-icons": "libs/web/icons",
+    "web-taper": "libs/web/taper",
     "web-ui": "libs/web/ui"
   }
 }
