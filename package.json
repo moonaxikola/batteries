@@ -2,12 +2,15 @@
   "name": "moonaxikola",
   "version": "0.0.0",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "postinstall": "husky install",
+    "format": "nx affected:format --fix --parallel --uncommitted",
+    "lint": "nx affected:lint --fix --parallel --uncommitted"
   },
-  "private": true,
   "dependencies": {
     "@emotion/react": "11.9.3",
     "@emotion/styled": "11.9.3",
@@ -18,6 +21,8 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.2",
     "@emotion/babel-plugin": "11.9.2",
     "@nrwl/cli": "14.3.5",
     "@nrwl/cypress": "14.3.5",
@@ -35,7 +40,10 @@
     "@typescript-eslint/eslint-plugin": "~5.24.0",
     "@typescript-eslint/parser": "~5.24.0",
     "babel-jest": "27.5.1",
+    "commitizen": "^4.2.4",
     "cypress": "^9.1.0",
+    "cz-conventional-changelog": "3.3.0",
+    "devmoji": "^2.3.0",
     "eslint": "~8.15.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",
@@ -43,12 +51,30 @@
     "eslint-plugin-jsx-a11y": "6.5.1",
     "eslint-plugin-react": "7.30.0",
     "eslint-plugin-react-hooks": "4.5.0",
+    "husky": "^8.0.1",
     "jest": "27.5.1",
+    "lint-staged": "^13.0.1",
     "nx": "14.3.5",
     "prettier": "^2.6.2",
     "react-test-renderer": "18.1.0",
     "ts-jest": "27.1.4",
     "ts-node": "~10.8.0",
     "typescript": "~4.7.2"
+  },
+  "lint-staged": {
+    "apps/**/*": [
+      "npm run lint"
+    ],
+    "libs/**/*": [
+      "npm run lint"
+    ],
+    "tools/**/*": [
+      "npm run lint"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
