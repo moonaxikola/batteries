@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@moonaxikola/ui/web": ["libs/ui/web/src/index.ts"]
+      "@moonaxikola/web/ui": ["libs/web/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

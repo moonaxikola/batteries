@@ -1,6 +1,6 @@
 {
   "$schema": "..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
-  "sourceRoot": "libs/ui/web/src",
+  "sourceRoot": "libs/web/ui/src",
   "projectType": "library",
   "tags": ["web ui"],
   "targets": {
@@ -8,16 +8,16 @@
       "executor": "@nrwl/web:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/ui/web",
-        "tsConfig": "libs/ui/web/tsconfig.lib.json",
-        "project": "libs/ui/web/package.json",
-        "entryFile": "libs/ui/web/src/index.ts",
+        "outputPath": "dist/libs/ui",
+        "tsConfig": "libs/web/ui/tsconfig.lib.json",
+        "project": "libs/web/ui/package.json",
+        "entryFile": "libs/web/ui/src/index.ts",
         "external": ["@emotion/react/jsx-runtime"],
         "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
         "compiler": "babel",
         "assets": [
           {
-            "glob": "libs/ui/web/README.md",
+            "glob": "libs/web/ui/README.md",
             "input": ".",
             "output": "."
           }
@@ -28,14 +28,14 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/ui/web/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["libs/web/ui/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/ui/web"],
+      "outputs": ["coverage/libs/ui"],
       "options": {
-        "jestConfig": "libs/ui/web/jest.config.ts",
+        "jestConfig": "libs/web/ui/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -45,7 +45,7 @@
         "uiFramework": "@storybook/react",
         "port": 4400,
         "config": {
-          "configFolder": "libs/ui/web/.storybook"
+          "configFolder": "libs/web/ui/.storybook"
         }
       },
       "configurations": {
@@ -61,7 +61,7 @@
         "uiFramework": "@storybook/react",
         "outputPath": "dist/storybook/ui-web",
         "config": {
-          "configFolder": "libs/ui/web/.storybook"
+          "configFolder": "libs/web/ui/.storybook"
         }
       },
       "configurations": {
