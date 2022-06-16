@@ -1,1 +1,1 @@
-export * from './lib/web-icons';
+export * from './lib/duotone';
