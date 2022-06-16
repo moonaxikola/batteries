@@ -2,7 +2,6 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
-    "batteries": "apps/batteries",
-    "batteries-e2e": "apps/batteries-e2e"
+    "docs": "apps/docs"
   }
 }

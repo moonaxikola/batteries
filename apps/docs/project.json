@@ -1,6 +1,6 @@
 {
   "$schema": "..\\..\\node_modules\\nx\\schemas\\project-schema.json",
-  "sourceRoot": "apps/batteries/src",
+  "sourceRoot": "apps/docs/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,13 +9,13 @@
       "defaultConfiguration": "production",
       "options": {
         "compiler": "babel",
-        "outputPath": "dist/apps/batteries",
-        "index": "apps/batteries/src/index.html",
+        "outputPath": "dist/apps/docs",
+        "index": "apps/docs/src/index.html",
         "baseHref": "/",
-        "main": "apps/batteries/src/main.tsx",
-        "polyfills": "apps/batteries/src/polyfills.ts",
-        "tsConfig": "apps/batteries/tsconfig.app.json",
-        "assets": ["apps/batteries/src/favicon.ico", "apps/batteries/src/assets"],
+        "main": "apps/docs/src/main.tsx",
+        "polyfills": "apps/docs/src/polyfills.ts",
+        "tsConfig": "apps/docs/tsconfig.app.json",
+        "assets": ["apps/docs/src/favicon.ico", "apps/docs/src/assets"],
         "styles": [],
         "scripts": [],
         "webpackConfig": "@nrwl/react/plugins/webpack"
@@ -30,8 +30,8 @@
         "production": {
           "fileReplacements": [
             {
-              "replace": "apps/batteries/src/environments/environment.ts",
-              "with": "apps/batteries/src/environments/environment.prod.ts"
+              "replace": "apps/docs/src/environments/environment.ts",
+              "with": "apps/docs/src/environments/environment.prod.ts"
             }
           ],
           "optimization": true,
@@ -47,15 +47,15 @@
       "executor": "@nrwl/web:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "batteries:build",
+        "buildTarget": "docs:build",
         "hmr": true
       },
       "configurations": {
         "development": {
-          "buildTarget": "batteries:build:development"
+          "buildTarget": "docs:build:development"
         },
         "production": {
-          "buildTarget": "batteries:build:production",
+          "buildTarget": "docs:build:production",
           "hmr": false
         }
       }
@@ -64,14 +64,14 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/batteries/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/docs/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/batteries"],
+      "outputs": ["coverage/apps/docs"],
       "options": {
-        "jestConfig": "apps/batteries/jest.config.ts",
+        "jestConfig": "apps/docs/jest.config.ts",
         "passWithNoTests": true
       }
     }
