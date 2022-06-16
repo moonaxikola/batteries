@@ -9,7 +9,7 @@
       }
     },
     {
-      "files": ["**/*.test.ts", "**/*.spec.ts", "**/*.spec.tsx", "**/*.d.ts"],
+      "files": ["**/*.test.ts", "**/*.spec.ts", "**/*.spec.tsx", "**/*.d.ts", "jest.config.ts"],
       "parserOptions": {
         "project": "libs/web/ui/tsconfig.spec.json"
       }

@@ -1,9 +1,9 @@
 export default {
-  displayName: 'ui',
-  preset: '../../jest.preset.js',
+  displayName: 'web-ui',
+  preset: '../../../jest.preset.js',
   transform: {
     '^.+\\.[tj]sx?$': 'babel-jest',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/libs/ui',
+  coverageDirectory: '../../../coverage/libs/ui',
 };
