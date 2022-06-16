@@ -6,7 +6,9 @@ import breakpoints from './breakpoints';
 import componentsOverride from './overrides';
 import shadows, { customShadows } from './shadows';
 
-export default function getTheme(mode: 'light' | 'dark') {
+export type ThemeMode = 'light' | 'dark';
+
+export function getTheme(mode: ThemeMode) {
   const theme = createTheme({
     palette: palette[mode],
     typography,
