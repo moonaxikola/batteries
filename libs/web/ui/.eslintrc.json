@@ -5,19 +5,19 @@
     {
       "files": ["*.ts", "*.tsx"],
       "parserOptions": {
-        "project": "libs/ui/web/tsconfig.lib.json"
+        "project": "libs/web/ui/tsconfig.lib.json"
       }
     },
     {
       "files": ["**/*.test.ts", "**/*.spec.ts", "**/*.spec.tsx", "**/*.d.ts"],
       "parserOptions": {
-        "project": "libs/ui/web/tsconfig.spec.json"
+        "project": "libs/web/ui/tsconfig.spec.json"
       }
     },
     {
       "files": ["**/*.stories.tsx"],
       "parserOptions": {
-        "project": "libs/ui/web/.storybook/tsconfig.json"
+        "project": "libs/web/ui/.storybook/tsconfig.json"
       }
     }
   ]
