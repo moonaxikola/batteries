@@ -1,1 +1,1 @@
-export * from './lib/ui-web';
+export * from './lib/badge-status';

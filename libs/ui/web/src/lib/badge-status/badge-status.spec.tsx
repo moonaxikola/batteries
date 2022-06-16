@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import UiWeb from './ui-web';
+import BadgeStatus from './badge-status.component';
 
-describe('UiWeb', () => {
+describe('BadgeStatus', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<UiWeb />);
+    const { baseElement } = render(<BadgeStatus />);
     expect(baseElement).toBeTruthy();
   });
 });
