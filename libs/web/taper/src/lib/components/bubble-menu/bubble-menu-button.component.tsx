@@ -1,5 +1,6 @@
-import { IconButton, Tooltip, Typography, useTheme } from '@mui/material';
 import { FC } from 'react';
+import { Label } from '@moonaxikola/web/ui';
+import { IconButton, Tooltip, Typography, useTheme } from '@mui/material';
 
 import { BubbleMenuButtonProps } from './bubble-menu.types';
 
@@ -10,8 +11,9 @@ const BubbleMenuButton: FC<BubbleMenuButtonProps> = ({ active, icon: Icon, name,
   return (
     <Tooltip
       title={
-        <Typography variant="caption">
-          {name} <code>{shortcut}</code>
+        <Typography variant="caption" sx={{ alignItems: 'center' }}>
+          {name}
+          {shortcut && <Label sx={{ fontSize: 'inherit', ml: 1 }}>{shortcut}</Label>}
         </Typography>
       }
     >

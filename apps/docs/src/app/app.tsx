@@ -5,7 +5,7 @@ const StyledApp = styled.div`
   // Your style here
 `;
 
-export function App() {
+function App() {
   return (
     <StyledApp>
       <NxWelcome title="batteries" />
