@@ -13,7 +13,7 @@ export function getTheme(mode: ThemeMode) {
     palette: palette[mode],
     typography,
     breakpoints,
-    shape: { borderRadius: 8 },
+    shape: { borderRadius: 6 },
     shadows: shadows[mode],
     customShadows: customShadows[mode],
   });

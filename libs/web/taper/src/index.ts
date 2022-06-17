@@ -1,1 +1,3 @@
-export * from './lib/web-taper';
+export * from './lib/@types';
+export * from './lib/components';
+export * from './lib/editors';

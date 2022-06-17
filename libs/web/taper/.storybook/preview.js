@@ -1,14 +1,13 @@
-import { SnackbarProvider } from 'notistack';
+import { getTheme } from '@moonaxikola/web/ui';
+import { TaperGlobalStyles } from '../src/lib/components';
 import { ThemeProvider } from '@mui/material';
 
-import { getTheme } from '../src';
 
 export const decorators = [
   Story => (
     <ThemeProvider theme={getTheme('dark')}>
-      <SnackbarProvider>
-        <Story />
-      </SnackbarProvider>
+      <TaperGlobalStyles />
+      <Story />
     </ThemeProvider>
   ),
 ];
