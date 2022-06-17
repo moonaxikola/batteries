@@ -1,6 +1,6 @@
 import { alpha, Theme, styled } from '@mui/material/styles';
 
-import { ColorSchema } from '../theme/palette';
+import { ColorSchema } from '../../theme/palette';
 import { LabelColor, LabelVariant } from './label.types';
 
 export const RootStyle = styled('span')(
