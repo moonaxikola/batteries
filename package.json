@@ -94,7 +94,10 @@
     "*.json": [
       "prettier --write ."
     ],
-    "apps/**/*,libs/**/*,tools/**/*": [
+    "apps/**/*": [
+      "npm run lint"
+    ],
+    "libs/**/*": [
       "npm run lint"
     ]
   },
